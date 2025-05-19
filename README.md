@@ -1,1 +1,3 @@
 # wh40k-roll-simulator
+
+I'm thinking that I'll use this project to just play around with warming up again in html, css, js. The plan will be to develop code that actually simulates dice rolls of a 40k unit attacking another 40k unit. The goal is to be able to specify the details of attacker and defender, specify the number of simulations to run, then to receive a readout detailing the specifics of the attacks, such as how many dice failed/passed at each step, how much a given modifier affected things, etc.
