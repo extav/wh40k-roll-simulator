@@ -1,7 +1,9 @@
 "use strict";
 
 import { lasgun, lasgun2 } from "./weapons/lasgun.js";
+import { intercessor } from "./models/intercessor.js";
 import { hitCheckMultiplier } from "./dicemath.js";
+import { calc_wound_roll, weaponAttackModel } from "./battlesim.js";
 
 console.log("script.js loaded successfully");
 
@@ -86,21 +88,6 @@ console.log(simulate_40k_attack(20, 3, 4, 5));
 console.log("Simulating many attacks");
 console.log(simulate_many_attacks(100, 20, 3, 4, 5));
 
-// lets add functions to calculate wound rolls
-function calc_wound_roll(S, T) {
-  if (S >= T * 2) {
-    return 2;
-  } else if (S > T) {
-    return 3;
-  } else if (S == T) {
-    return 4;
-  } else if (S > T / 2) {
-    return 5;
-  } else {
-    return 6;
-  }
-}
-
 console.log("Start testing wound calc");
 console.log("expect 6, 5, 4, 3, 3, 2");
 const wound_calc_test_1 = [];
@@ -144,3 +131,6 @@ console.log(hitCheckMultiplier(5, -1));
 
 console.log("testing hit check for 6+ with reroll, want >0.16");
 console.log(hitCheckMultiplier(5, -1, true));
+
+console.log("Test weapon attacking model with truemath");
+console.log(weaponAttackModel(lasgun, intercessor));

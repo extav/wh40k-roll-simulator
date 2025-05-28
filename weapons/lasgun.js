@@ -2,6 +2,7 @@
 
 const lasgun = {
   name: "lasgun",
+  bs: 4,
   attacks: 2,
   strength: 3,
   AP: 0,
