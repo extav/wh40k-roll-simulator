@@ -1,6 +1,6 @@
 "use strict";
 
-import { modelsAttackModels } from "./battlesim.js";
+import { modelsAttackModels, formatResult } from "./battlesim.js";
 
 function createWeaponBox() {
   const wbox = document.createElement("div");
@@ -108,7 +108,6 @@ function calculateResults() {
   attacker.save = Number(atk.children[2].children[1].value);
   attacker.wounds = Number(atk.children[3].children[1].value);
 
-
   // build attacker weapon
   attacker.weapons = [];
   const wpns = document.querySelectorAll(".weapon-input");
@@ -140,7 +139,7 @@ function calculateResults() {
   const battleResults = modelsAttackModels(attacker, defender, 10);
   // set the text field
   const txt = document.getElementById("results-text");
-  txt.value = JSON.stringify(battleResults);
+  txt.value = formatResult(battleResults);
 }
 
 setUpPage();

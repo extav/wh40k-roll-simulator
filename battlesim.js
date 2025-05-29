@@ -51,7 +51,15 @@ function modelsAttackModels(attacker, defender, N) {
     woundsTaken: defender.woundsTaken,
     modelsLost: defender.modelsLost,
   };
-  return resultObj
+  return resultObj;
+}
+
+function formatResult(resultObj) {
+  let outputString = "";
+  outputString += resultObj.name + " lost ";
+  outputString += resultObj.modelsLost + " models and one model took ";
+  outputString += resultObj.woundsTaken + " wounds.";
+  return outputString;
 }
 
 function logResults(resultObj) {
@@ -65,4 +73,4 @@ function logResults(resultObj) {
   );
 }
 
-export { calc_wound_roll, weaponAttackModel, modelsAttackModels };
+export { calc_wound_roll, weaponAttackModel, modelsAttackModels, formatResult };
