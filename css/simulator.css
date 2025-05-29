@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputs {
+    display: flex;
+
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column   ;
+}
+
+.weapon-input {
+    border: 1px solid black;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}

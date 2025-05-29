@@ -4,82 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="simulator.js" type="module"></script>
+    <link rel="stylesheet" href="css/simulator.css" />
     <title>Simulator</title>
   </head>
   <body>
     <a href="./index.html">Homepage</a>
-    <div id="attacker">
-      <form action="" method="post" id="attacker-form">
-        <p>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="attacker-name" />
-        </p>
-        <p>
-          <label for="toughness">Toughness</label>
-          <input type="text" id="toughness" name="attacker-toughness" />
-        </p>
-        <p>
-          <label for="save">Save</label>
-          <input type="text" id="save" name="attacker-save" />
-        </p>
-        <p>
-          <label for="wounds">Wounds</label>
-          <input type="text" id="wounds" name="attacker-wounds" />
-        </p>
-        <div class="weapon-input">
-          <p>
-            <label for="weapon-1-name">Weapon Name</label>
-            <input type="text" id="weapon-1-name" name="name" />
-          </p>
-
-          <p>
-            <label for="weapon-1-bs">Weapon BS</label>
-            <input type="text" id="weapon-1-bs" name="BS" />
-          </p>
-
-          <p>
-            <label for="weapon-1-attacks">Weapon Attacks</label>
-            <input type="text" id="weapon-1-attacks" name="attacks" />
-          </p>
-
-          <p>
-            <label for="weapon-1-strength">Weapon Strength</label>
-            <input type="text" id="weapon-1-strength" name="strength" />
-          </p>
-
-          <p>
-            <label for="weapon-1-ap">Weapon AP</label>
-            <input type="text" id="weapon-1-ap" name="AP" />
-          </p>
-
-          <p>
-            <label for="weapon-1-damage">Weapon Damage</label>
-            <input type="text" id="weapon-1-damage" name="damage" />
-          </p>
-        </div>
-      </form>
-    </div>
-    <div id="defender">
-      <form action="" method="post" id="defender-form">
-        <p>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="defender-name" />
-        </p>
-        <p>
-          <label for="toughness">Toughness</label>
-          <input type="text" id="toughness" name="defender-toughness" />
-        </p>
-        <p>
-          <label for="save">Save</label>
-          <input type="text" id="save" name="defender-save" />
-        </p>
-        <p>
-          <label for="wounds">Wounds</label>
-          <input type="text" id="wounds" name="defender-wounds" />
-        </p>
-      </form>
+    <div class="inputs">
+      <div id="attacker" class="input-area">
+        <h3>Attacker</h3>
+        <form action="" method="post" id="attacker-form">
+          <div class="base-stats">
+            <p>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="attacker-name" />
+            </p>
+            <p>
+              <label for="toughness">Toughness</label>
+              <input type="text" id="toughness" name="attacker-toughness" />
+            </p>
+            <p>
+              <label for="save">Save</label>
+              <input type="text" id="save" name="attacker-save" />
+            </p>
+            <p>
+              <label for="wounds">Wounds</label>
+              <input type="text" id="wounds" name="attacker-wounds" />
+            </p>
+          </div>
+        </form>
+      </div>
+      <div id="defender" class="input-area">
+        <h3>Defender</h3>
+        <form action="" method="post" id="defender-form">
+          <div class="base-stats">
+            <p>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="defender-name" />
+            </p>
+            <p>
+              <label for="toughness">Toughness</label>
+              <input type="text" id="toughness" name="defender-toughness" />
+            </p>
+            <p>
+              <label for="save">Save</label>
+              <input type="text" id="save" name="defender-save" />
+            </p>
+            <p>
+              <label for="wounds">Wounds</label>
+              <input type="text" id="wounds" name="defender-wounds" />
+            </p>
+          </div>
+        </form>
+      </div>
     </div>
     <div id="results">
+      <button id="new-wpn-btn">Add Weapon</button>
       <button id="results-button">Calculate Results</button>
       <textarea
         name="results-text"
