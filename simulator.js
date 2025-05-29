@@ -107,6 +107,7 @@ function calculateResults() {
   attacker.toughness = Number(atk.children[1].children[1].value);
   attacker.save = Number(atk.children[2].children[1].value);
   attacker.wounds = Number(atk.children[3].children[1].value);
+  attacker.count = Number(atk.children[4].children[1].value);
 
   // build attacker weapon
   attacker.weapons = [];
@@ -136,7 +137,7 @@ function calculateResults() {
   defender.woundsTaken = 0;
   defender.modelsLost = 0;
 
-  const battleResults = modelsAttackModels(attacker, defender, 10);
+  const battleResults = modelsAttackModels(attacker, defender, attacker.count);
   // set the text field
   const txt = document.getElementById("results-text");
   txt.value = formatResult(battleResults);
