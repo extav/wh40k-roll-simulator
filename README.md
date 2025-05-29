@@ -5,6 +5,18 @@ I'm thinking that I'll use this project to just play around with warming up agai
 
 Battle Simulation Strategy
 
+How should things be structured?
+  - Everything is based around models and weapons
+  - A model has:
+    - Toughness
+    - Wounds
+    - Save
+    - Special Rules
+    - Weapons
+    - Wounds taken
+    - Models Lost
+
+
 -- weapon attack function
 a single weapon makes an attack against a single model
 
