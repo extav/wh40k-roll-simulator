@@ -20,7 +20,7 @@ function calc_wound_roll(S, T) {
 // add an object with additional things to consider on the hit like rerolls
 //  can check the object for keywords to figure out what to do
 function weaponAttackModel(weapon, model) {
-  const bs = weapon.bs;
+  const bs = weapon.BS;
   const hitMult = hitCheckMultiplier(bs, 0, false);
   const woundTarget = calc_wound_roll(weapon.strength, model.toughness);
   const woundMult = hitCheckMultiplier(woundTarget, 0, false);
